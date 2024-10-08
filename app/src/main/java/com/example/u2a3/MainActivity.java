@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         // Inicializar el MapView
         mapView = findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);
-        mapView.getMapAsync(this); // Usa 'this' para implementar OnMapReadyCallback
+        mapView.getMapAsync(this);
 
         // Inicializar el cliente de ubicación
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
