@@ -1,5 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
+    id("org.sonarqube") version "5.1.0.4882"
+
 }
 
 android {
@@ -43,3 +45,13 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 }
+
+sonarqube {
+    properties {
+        property("sonar.projectKey", "jomyandres")
+        property("sonar.projectName", "jomyandres")
+        property("sonar.host.url", "http://localhost:9000")
+        property("sonar.token", "sqp_44263e53a645bd5e8f76d2d35d802af6a522ab06")
+    }
+}
+
